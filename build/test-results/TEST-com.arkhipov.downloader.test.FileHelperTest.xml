@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.arkhipov.downloader.test.FileHelperTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-12-10T04:31:15" hostname="Kirill-pk" time="0.03">
+  <properties/>
+  <testcase name="testSaveResultToFolder" classname="com.arkhipov.downloader.test.FileHelperTest" time="0.013"/>
+  <testcase name="testReadFromLinkFile" classname="com.arkhipov.downloader.test.FileHelperTest" time="0.012"/>
+  <testcase name="testCreateTargetFolderIfExists" classname="com.arkhipov.downloader.test.FileHelperTest" time="0.001"/>
+  <testcase name="testCreateTargetFolderIfNotExists" classname="com.arkhipov.downloader.test.FileHelperTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

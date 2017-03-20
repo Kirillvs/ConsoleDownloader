@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.arkhipov.downloader.test.DownloadThreadTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-12-05T11:52:55" hostname="Kirill-pk" time="1.395">
+  <properties/>
+  <testcase name="testSomthing" classname="com.arkhipov.downloader.test.DownloadThreadTest" time="1.395"/>
+  <system-out><![CDATA[Thread start download link -  http://google.com
+Thread finish download link -  http://google.com
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
