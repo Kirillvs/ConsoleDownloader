@@ -20,7 +20,7 @@ public class ConsoleParams {
 		Map<String, String> params = parseParams(args);
 		setInstanceVariables(params);
 	}
-	
+
 	private Map<String, String> parseParams(String[] args){
 		Map<String, String> mapParams = new HashMap<>(); 
 		for(int i = 0; i < args.length; i += 2){
@@ -30,10 +30,15 @@ public class ConsoleParams {
 	}
 	
 	private void setInstanceVariables(Map<String, String> mapParams){
-		numberThreads = Integer.parseInt(mapParams.get("-n"));
-		speed = parseSpeed(mapParams.get("-l"));
-		folderPath = mapParams.get("-o");
-		pathToSourceFile = mapParams.get("-f");		
+		try{
+			numberThreads = Integer.parseInt(mapParams.get("-n"));
+			speed = parseSpeed(mapParams.get("-l"));
+			folderPath = mapParams.get("-o");
+			pathToSourceFile = mapParams.get("-f");
+		}catch(IllegalArgumentException e){
+			System.out.println("Заданы неверные параметры!");
+			System.exit(1);
+		}
 	}
 	
 	private int parseSpeed(String speed){
