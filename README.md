@@ -11,10 +11,10 @@ Params:
 - -o destination folder
 
 File with list of links format:
-`<link><space><destination file name>`
-examples:
+`<link><space><destination file name>`  
+examples:  
  - http://example.com/archive.zip my_archive.zip
  - http://example.com/image.jpg picture.jpg
 
-usage example:
+usage example:  
 java -jar ConsoleDonwloadUtility-0.1.4.jar -n 5 -l 2000k -o output_folder -f links.txt
