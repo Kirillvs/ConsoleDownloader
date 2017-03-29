@@ -36,14 +36,14 @@ public class DownloadController {
 	public void doWork(){
 		TicketBucket bucket = TicketBucket.getTicketBucket(consoleParams.getSpeed());
 		Timer timer = new Timer();
-		System.out.println("Загрузка началась...");
+		System.out.println("Р—Р°РіСЂСѓР·РєР° РЅР°С‡Р°Р»Р°СЃСЊ...");
 		timer.schedule(bucket, 0, 1000);
 		startTime = new Date().getTime();
 		ExecutorService executorService = Executors.newFixedThreadPool(consoleParams.getNumberThreads());
 		for(DownloadedObject object : downloadedObjects){
 			executorService.submit(new DownloadThread(object, bucket));
 		}
-		//блокируем основной поток, пока не выполнятся все задачи ExecutorService
+		//Р±Р»РѕРєРёСЂСѓРµРј РѕСЃРЅРѕРІРЅРѕР№ РїРѕС‚РѕРє, РїРѕРєР° РЅРµ РІС‹РїРѕР»РЅСЏС‚СЃСЏ РІСЃРµ Р·Р°РґР°С‡Рё ExecutorService
 		executorService.shutdown();
 		try {
 			executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
@@ -58,9 +58,9 @@ public class DownloadController {
 		double resultTime = (double)(endTime - startTime) / 1000;
 		int allBytes = getAllBytes(downloadedObjects);
 		double resultSpeed = (double)allBytes / resultTime / 1024.0;
-		System.out.println("Прошло " + resultTime + " сек.");
-		System.out.println("Всего загруженно - " + allBytes + " байт");
-		System.out.println("Средняя скорость - " + resultSpeed + " кбайт/сек.");
+		System.out.println("РџСЂРѕС€Р»Рѕ " + resultTime + " СЃРµРє.");
+		System.out.println("Р’СЃРµРіРѕ Р·Р°РіСЂСѓР¶РµРЅРЅРѕ - " + allBytes + " Р±Р°Р№С‚");
+		System.out.println("РЎСЂРµРґРЅСЏСЏ СЃРєРѕСЂРѕСЃС‚СЊ - " + resultSpeed + " РєР±Р°Р№С‚/СЃРµРє.");
 	}
 	
 	private int getAllBytes(ArrayList<DownloadedObject> downloadedObjects){

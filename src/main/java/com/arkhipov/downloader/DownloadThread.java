@@ -20,7 +20,7 @@ public class DownloadThread implements Runnable {
 
 	@Override
 	public void run() {
-		//System.out.println("Поток начал загрузку по ссылке -  " + downloadedObject.getLink());
+		//System.out.println("РџРѕС‚РѕРє РЅР°С‡Р°Р» Р·Р°РіСЂСѓР·РєСѓ РїРѕ СЃСЃС‹Р»РєРµ -  " + downloadedObject.getLink());
 		URL url;
 		try {
 			url = new URL(downloadedObject.getLink());
@@ -38,7 +38,7 @@ public class DownloadThread implements Runnable {
 	        in.close();
 	        baos.close();
 	        downloadedObject.setBytes(result);
-			//System.out.println("Поток закончил загрузку по ссылке -  " + downloadedObject.getLink());
+			//System.out.println("РџРѕС‚РѕРє Р·Р°РєРѕРЅС‡РёР» Р·Р°РіСЂСѓР·РєСѓ РїРѕ СЃСЃС‹Р»РєРµ -  " + downloadedObject.getLink());
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);
