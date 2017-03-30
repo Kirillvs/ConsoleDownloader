@@ -1,6 +1,6 @@
-# Console HTTP Downloader
+# Console Downloader
 
-Simple console http downloader
+Simple console downloader
 
 ## Usage
 
